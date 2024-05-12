@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header(props) {
   const { articles, setArticles } = props;
 
@@ -15,12 +17,12 @@ function Header(props) {
         <img src="Union.svg" alt="logo pic" />
         <img src="Blog.svg" alt="blog pic" className="  " />
       </div>
-      <a
-        href="#"
+      <Link
+        to="/"
         className=" text-[#3B3C4A]  hover:text-blue-400 transition-all  leading-6"
       >
         Home
-      </a>
+      </Link>
       <input
         type="text"
         placeholder="Search"

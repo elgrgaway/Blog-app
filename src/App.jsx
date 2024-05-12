@@ -1,68 +1,45 @@
-// import Card from "./Card";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import Home from "./pages/Home";
+// import Layout from "./pages/Layout";
+// import BlogPage from "./pages/BlogPage";
 
-import Header from "./components/Header";
-import ListCard from "./components/ListCard";
-const dummyArticles = [
-  {
-    id: 1,
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    category: "Technology",
-    mainImg: "Rectangle 38.png",
-    personImg: "Image.png",
-    name: "Tracey Wilson",
-    publishedAt: "August 20, 2022",
-  },
-  {
-    id: 2,
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Layout />,
+//     // errorElement: <NoPage />,
+//     children: [
+//       {
+//         index: true,
+//         element: <Home />,
+//       },
+//       {
+//         path: "/:name",
+//         element: <BlogPage />,
+//       },
+//     ],
+//   },
+// ]);
+// function App() {
+//   return <RouterProvider router={router} />;
+// }
 
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    category: "Technology",
-    mainImg: "Rectangle 38.png",
-    personImg: "Image.png",
-    name: "Tracey Wilson",
-    publishedAt: "August 20, 2022",
-  },
-  {
-    id: 3,
+// export default App;
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import BlogPage from "./pages/BlogPage";
 
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    category: "Technology",
-    mainImg: "Rectangle 38.png",
-    personImg: "Image.png",
-    name: "Tracey Wilson",
-    publishedAt: "August 20, 2022",
-  },
-  {
-    id: 4,
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    category: "Technology",
-    mainImg: "Rectangle 38.png",
-    personImg: "Image.png",
-    name: "Tracey Wilson",
-    publishedAt: "August 20, 2022",
-  },
-  {
-    id: 5,
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    category: "Technology",
-    mainImg: "Rectangle 38.png",
-    personImg: "Image.png",
-    name: "Tracey Wilson",
-    publishedAt: "August 20, 2022",
-  },
-];
 function App() {
   return (
-    <section className=" max-w-[1216px] m-auto">
-      <Header />
-      <ListCard articles={dummyArticles} />
-      {/* <Card /> */}
-    </section>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path=":name" element={<BlogPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
