@@ -6,7 +6,7 @@ function Header(props) {
   const searchHandler = (e) => {
     const searchQuery = e.target.value.toLowerCase();
     const filteredArticles = articles.filter((article) =>
-      article.title.toLowerCase().includes(searchQuery)
+      article.name.toLowerCase().includes(searchQuery)
     );
     setArticles(filteredArticles);
   };

@@ -1,35 +1,3 @@
-// import { useParams } from "react-router-dom";
-// import { dummyArticles } from "../../dummyArticles";
-// const BlogPage = () => {
-//   const { name } = useParams();
-
-//   return (
-//     <>
-//       {dummyArticles.map((article) => {
-//         article.name === name ? (
-//           <section>
-//             <span>{article.category}</span>
-//             <h3>{article.title}</h3>
-//             <div className="flex items-center gap-3">
-//               <img src={article.personImg} alt="" />
-//               <span className="font-semibold text-[#97989F]">
-//                 {article.name}
-//               </span>
-//               <span className="font-semibold text-[#97989F]">
-//                 {article.publishedAt}
-//               </span>
-//             </div>
-//           </section>
-//         ) : (
-//           <div>err</div>
-//         );
-//       })}
-//       {/* Other content */}
-//     </>
-//   );
-// };
-// export default BlogPage;
-
 import { useParams } from "react-router-dom";
 import { dummyArticles } from "../../dummyArticles";
 
