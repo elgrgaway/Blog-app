@@ -25,7 +25,7 @@ function Header(props) {
       </Link>
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Search by name"
         onChange={searchHandler}
         className=" w-[166px] bg-[#F4F4F5] text-[#A1A1AA] py-2 transition-all outline-none  pl-4 pr-9 rounded-md focus:w-[180px]"
       />
